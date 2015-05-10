@@ -11,3 +11,6 @@
 /log/*
 !/log/.keep
 /tmp
+
+# ignore vendor assets, gems, etc.
+/vendor
