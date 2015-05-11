@@ -17,9 +17,10 @@ ActiveRecord::Schema.define(version: 20150511005021) do
   enable_extension "plpgsql"
 
   create_table "poems", force: :cascade do |t|
-    t.string   "title",                   null: false
-    t.text     "text",                    null: false
-    t.string   "prompts",    default: [], null: false, array: true
+    t.string   "title",                          null: false
+    t.string   "author",     default: "Unknown", null: false
+    t.integer  "year"
+    t.text     "text",                           null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
