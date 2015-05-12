@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<%= simple_form_for @poem do |f| %>
+<%= form_tag(poem_fill_path(@poem)) do |f| %>
   <table cellpadding="3">
     <thead><th>#</th><th>Description</th><th>Your Word</th></thead>
     <tbody>
@@ -13,6 +13,7 @@
     <% end %>
     </tbody>
   </table>
+  <%= submit_tag "Submit" %>
 <% end %>
 
 <%= link_to 'Back', poems_path %>
