@@ -8,4 +8,10 @@ class PoemsController < ApplicationController
     @poem = Poem.find(params[:id])
   end
 
+  def fill
+    poem = Poem.find(params[:poem_id])
+    responses = params[:responses]
+    @filled_in = poem.fill_with responses
+  end
+
 end

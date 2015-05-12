@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :poems, only: [:index, :show]
+  resources :poems, only: [:index, :show] do
+    post :fill
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
