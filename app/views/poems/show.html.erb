@@ -1,4 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_poem_path(@poem) %> |
+<%= simple_form_for @poem do |f| %>
+  <table cellpadding="3">
+    <thead><th>#</th><th>Description</th><th>Your Word</th></thead>
+    <tbody>
+    <% @poem.prompts.keys.each_with_index do |old_word, index| %>
+      <tr>
+        <td align="right"><%= index + 1 %></td>
+        <td><%= @poem.prompts[old_word] %></td>
+        <td><%= text_field :responses, old_word, size: 20 %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+<% end %>
+
 <%= link_to 'Back', poems_path %>
