@@ -2,27 +2,39 @@ class Poem < ActiveRecord::Base
 
   def fill_with(responses)
     result = text.dup
-    responses.each do |key, val|
-      result.gsub!(descriptor_regex(key), val) # 1st use, eg @{tree: noun, one syllable}
-      result.gsub!(/@{#{key}}/, val) # later uses, like @{tree}
+    responses.each_with_index do |(old_word, substitute), index|
+      result.gsub!(prompt_regex(old_word), substitute)  # prompt
+      result.gsub!(/@{#{old_word}}/, substitute)  # back-refs
     end
     result
   end
 
   def prompts
     results = {}
-    tmp_text = text.dup
-    while (matches = tmp_text.match descriptor_regex("\\w*"))
-      results[matches[1]] = matches[2]
-      tmp_text.sub!(matches[0], "")
+    words = []
+    min_offset = 0
+    while (matches = text.match(prompt_regex("\\w*"), min_offset))
+      prompt = matches[:prompt]
+      old_word = matches[:old_word]
+      fix_backrefs_in_prompt(prompt, words)
+      words << old_word
+      results[old_word] = prompt
+      min_offset = matches.offset(:prompt).last + 2
     end
     results
   end
 
   private
 
-  def descriptor_regex(key)
-    /@{(#{key}): ([^}]+)}/
+  def prompt_regex(key)
+    /@{(?<old_word>#{key}): (?<prompt>[^}]+)}/
+  end
+
+  def fix_backrefs_in_prompt(prompt, words)
+    while (matches = prompt.match /@(\w+)@/)
+      number = words.find_index matches[1]
+      prompt.gsub! matches[0], "##{number + 1}"
+    end
   end
 
 end
