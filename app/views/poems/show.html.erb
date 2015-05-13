@@ -1,19 +1,32 @@
-<p id="notice"><%= notice %></p>
+<p>
+Fill in a response for each description.&nbsp;
+It may be one word or more,
+just so long as the part of speech, number of syllables, and accent are right.&nbsp;
+Why?&nbsp;
+Because we like you, er, I mean, because it's poetry!&nbsp;
+Then click Submit, and see what you've created.&nbsp;
+(Eventually you'll be able to save it too.&nbsp;
+Meanwhile, you can save it from your browser,
+or take a screenshot.)
+</p>
 
 <%= form_tag(poem_fill_path(@poem)) do |f| %>
   <table cellpadding="3">
-    <thead><th>#</th><th>Description</th><th>Your Word</th></thead>
+    <thead><th>#</th><th>Description</th><th>Response</th></thead>
     <tbody>
     <% @poem.prompts.keys.each_with_index do |old_word, index| %>
       <tr>
         <td align="right"><%= index + 1 %></td>
         <td><%= @poem.prompts[old_word] %></td>
-        <td><%= text_field :responses, old_word, size: 20 %></td>
+        <td><%= text_field :responses, old_word, size: 20, required: true %></td>
       </tr>
     <% end %>
     </tbody>
   </table>
+  <br/>
   <%= submit_tag "Submit" %>
 <% end %>
+
+<br/>
 
 <%= link_to 'Back', poems_path %>
