@@ -39,9 +39,6 @@ describe "filling in a poem" do
   it "prompts with number-references filled in" do
     When I ask_to_fill_the_poem
     Then I see_the_prompts
-  end
-
-  it "shows it with all references filled in" do
     When I fill_in_the_poem
     Then I see_the_poem_filled_in
   end
