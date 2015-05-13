@@ -10,6 +10,8 @@ Meanwhile, you can save it from your browser,
 or take a screenshot.)
 </p>
 
+<p>If you'd rather use a different poem, <%= link_to("go here", root_path) %>.&nbsp; You'll get a random one out of our collection of <%= Poem.count %>.</p>
+
 <%= form_tag(poem_fill_path(@poem)) do |f| %>
   <table cellpadding="3">
     <thead><th>#</th><th>Description</th><th>Response</th></thead>

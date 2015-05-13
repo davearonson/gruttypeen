@@ -8,6 +8,11 @@ class PoemsController < ApplicationController
     @poem = Poem.find(params[:id])
   end
 
+  def random
+    @poem = Poem.order("random()").first
+    render :show
+  end
+
   def fill
     poem = Poem.find(params[:poem_id])
     responses = params[:responses]
