@@ -30,3 +30,13 @@ Poem.create(title: "Trees",
               "@{poems: noun, plural, two syllables, accent on the first} are @{made: verb, past perfect ('has' form), one syllable} by @{fools: type of person, plural, one syllable} like @{me: noun, one syllable, rhyming with @tree@},",
               "But only @{God} can make a @{tree}."
             ].join("\n"))
+
+Poem.create(title: "Roses are Red",
+            author: "unknown",
+            text: [
+              "@{Roses: noun, plural, two syllables, accent on the first} are @{red: adjective, one syllable}",
+              "@{Violets: noun, plural, two syllables, accent on the first} are @{blue: adjective, one syllable}",
+              "@{Sugar: noun, two syllables, accent on the first} is @{sweet: adjective, one syllable}",
+              # okay, cheating here a bit, hard to rhyme plural nouns....
+              "And so is @{you: noun, one syllable, rhyming with @blue@}",
+            ].join("\n"))
