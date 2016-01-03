@@ -12,8 +12,8 @@ describe "filling in a poem" do
           " @{tree: singular of @Trees@}") }
 
   let(:poem_filled_in) { [
-    "#{responses["Trees"]}\n"\
-    "#{responses["I"]} think that I shall never"\
+    "#{responses["Trees"].capitalize}\n"\
+    "#{responses["I"].capitalize} think that I shall never"\
     " #{responses["see"]}\n"\
     "A #{responses["poem"]}"\
     " #{responses["lovely"]} as a"\
