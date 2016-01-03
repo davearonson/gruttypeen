@@ -39,3 +39,22 @@ Poem.create(title: "Roses are Red",
               @{Sugar: noun, two syllables, accent on the first} is @{sweet: adjective, one syllable}
               And so are @{you: noun, plural, one syllable, rhyming with @blue@}.
 EOT
+
+Poem.create(title: "How Do I Love Thee? Let Me Count the Ways",
+            author: "Elizabeth Barrett Browning",
+            text: <<-EOT.gsub(/^ */, "").gsub(/\n\Z/, ""))
+              How do I @{love: verb, transitive, one syllable} thee? Let me count the @{ways: noun, plural, one syllable}.
+              I @{love} thee to the depth and breadth and height
+              My @{soul: noun, one syllable} can @{reach: verb, one syllable}, when feeling out of sight
+              For the ends of Being and ideal Grace.
+              I @{love} thee to the level of every day's
+              Most @{quiet: adjective, two syllables, accent on the first} need, by @{sun: noun, one syllable} and candle-light.
+              I @{love} thee @{freely: adverb, two syllables}, as men strive for right;
+              I @{love} thee @{purely: adverb, two syllables}, as they turn from praise,
+              I @{love} thee with the @{passion: noun, two syllables, accent on the first} put to @{use: verb, transitive, one syllable}
+              In my old @{griefs: noun, plural, one syllable}, and with my childhood's faith.
+              I @{love} thee with a @{love} I seemed to @{lose: verb, transitive, one syllable, rhymes with @use@}
+              With my lost saints -I @{love} thee with the @{breath: noun, one syllable},
+              Smiles, tears, of all my @{life: noun, one syllable}! -and, if God choose,
+              I shall but @{love} thee better after @{death: noun, one syllable, rhymes with @breath@}.
+EOT
