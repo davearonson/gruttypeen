@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Poems</h1>
+<h1>List of Poems</h1>
 
 <ul>
   <% @poems.each do |poem| %>
-    <li><%= link_to poem.title, poem %></li>
+    <li><%= link_to "\"#{poem.title}\", by #{poem.author}", poem %></li>
   <% end %>
 </ul>

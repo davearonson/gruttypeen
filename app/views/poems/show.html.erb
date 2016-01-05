@@ -1,16 +1,20 @@
 <p>
 Fill in a response for each description.&nbsp;
 It may be one word or more,
-just so long as the part of speech, number of syllables, and accent are right.&nbsp;
-Why?&nbsp;
-Because we like you, er, I mean, because it's poetry!&nbsp;
-Then click Submit, and see what you've created.&nbsp;
-(Eventually you'll be able to save it too.&nbsp;
-Meanwhile, you can save it from your browser,
-or take a screenshot.)
-</p>
+just so long as
+the part of speech, number of syllables, and accent are right.</p>
 
-<p>If you'd rather use a different poem, <%= link_to("go here", root_path) %>.&nbsp; You'll get a random one out of our collection of <%= Poem.count %>.</p>
+<p>(Why?&nbsp; Because we like you, er, I mean, because it's poetry!)</p>
+
+<p>Then click Submit, and see what you've created.</p>
+
+<p>(Eventually you'll be able to save it too.&nbsp;
+Meanwhile, you can save it from your browser, or take a screenshot.)</p>
+
+<p>If you'd rather use a different poem,
+see <%= link_to("the poem list", poems_path) %> for the list of poems,
+or <%= link_to("ask for a random poem", random_poems_path) %>
+(which may be the same one).</p>
 
 <%= form_tag(poem_fill_path(@poem)) do |f| %>
   <table cellpadding="3">
@@ -31,4 +35,4 @@ or take a screenshot.)
 
 <br/>
 
-<%= link_to 'Back', poems_path %>
+<%= link_to 'List', poems_path %>

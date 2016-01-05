@@ -2,13 +2,14 @@ Rails.application.routes.draw do
 
   resources :poems, only: [:index, :show] do
     post :fill
+    collection { get "random" }
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'poems#random'
+  root 'home#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
