@@ -7,3 +7,7 @@
     <li><%= link_to "\"#{poem.title}\", by #{poem.author}", poem %></li>
   <% end %>
 </ul>
+
+<p>But please don't pick from this list.&nbsp;
+It's <i>much</i> more fun if you have no clue what the poem is.&nbsp;
+So, <%= link_to "ask for a random poem", random_poems_path %>.</p>
