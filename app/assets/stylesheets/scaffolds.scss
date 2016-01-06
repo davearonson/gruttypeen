@@ -33,9 +33,14 @@ div {
   &.field, &.actions {
     margin-bottom: 10px;
   }
+  &.centered {
+    display: table;
+    margin: auto;
+  }
 }
 
 h1, h2, h3, h4 { text-align: center }
+h1.site-title { color: #080 }
 
 #notice {
   color: green;
