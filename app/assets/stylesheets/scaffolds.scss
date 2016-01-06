@@ -39,7 +39,10 @@ div {
 
 h1, h2, h3, h4 { text-align: center }
 
-h1.site-title { color: #080 }
+h1.site-title {
+  color: #080;
+  line-height: 1.2em;
+}
 
 #notice {
   color: green;
