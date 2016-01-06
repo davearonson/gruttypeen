@@ -29,12 +29,15 @@ or <%= link_to("ask for a random poem", random_poems_path) %>
         <td><%= text_field :responses, old_word, size: 20, required: true %></td>
       </tr>
     <% end %>
+    <tr>
+      <td></td>
+      <td></td>
+      <td><%= submit_tag "Submit", class: :centered %></td>
+    </tr>
     </tbody>
   </table>
-  <br/>
-  <%= submit_tag "Submit" %>
 <% end %>
 
 <br/>
 
-<%= link_to 'List', poems_path %>
+<%= link_to 'List', poems_path, class: :centered %>
