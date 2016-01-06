@@ -24,7 +24,7 @@ or <%= link_to("ask for a random poem", random_poems_path) %>
     <tbody>
     <% @poem.prompts.keys.each_with_index do |old_word, index| %>
       <tr>
-        <td align="right"><%= index + 1 %></td>
+        <td align="right" valign="top"><%= index + 1 %>:</td>
         <td><%= @poem.prompts[old_word] %></td>
         <td><%= text_field :responses, old_word, size: 20, required: true %></td>
       </tr>
