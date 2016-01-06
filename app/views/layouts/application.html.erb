@@ -16,7 +16,7 @@
 <div class="centered">
   <%= yield %>
   <% unless current_page?(root_path) %>
-    <p><%= link_to "Home", root_path %></p>
+    <p><%= link_to "Home", root_path, class: :centered %></p>
   <% end %>
 </div>
 

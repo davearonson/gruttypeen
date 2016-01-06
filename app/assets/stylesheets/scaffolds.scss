@@ -31,10 +31,6 @@ div {
   &.field, &.actions {
     margin-bottom: 1em;
   }
-  &.centered {
-    display: table;
-    margin: auto;
-  }
 }
 
 h1, h2, h3, h4 { text-align: center }
@@ -43,6 +39,8 @@ h1.site-title {
   color: #080;
   line-height: 1.2em;
 }
+
+li { margin: .5em auto; }
 
 #notice {
   color: green;
@@ -73,4 +71,9 @@ h1.site-title {
   ul li {
     list-style: square;
   }
+}
+
+.centered {
+  display: table;
+  margin: 0 auto;
 }
