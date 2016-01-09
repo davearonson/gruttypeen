@@ -1,4 +1,4 @@
-== GruttyPeen
+# GruttyPeen
 
 This is a silly little toy I thought up many years ago... then got around to
 actually creating a few years ago... and added some polish and finally put it
