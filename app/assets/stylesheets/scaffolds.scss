@@ -34,11 +34,19 @@ div {
 }
 
 h1, h2, h3, h4 {
-  line-height: 1.2em;
+  line-height: 1.5em;
   text-align: center;
 }
 
-h1.site-title { color: #080 }
+h1.site-title {
+  color: #080;
+  a {
+    color: #282;
+    &:visited {
+      color: #484;
+    }
+  }
+}
 
 li { margin: .5em auto; }
 
