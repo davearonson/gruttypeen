@@ -7,7 +7,8 @@ party.  Hi Tara!
 
 It's essentially Mad Libs for poetry.  That's why it asks you for words
 that fit not only a given part of speech, but a given number of syllables and
-accent, and maybe also rhyme with another.  The name comes from a name of a
+accent, and maybe also rhyme with another.  The name Grutty Peen comes from a
+poem made up by a Vogon.  What's a Vogon?  That is the name of a
 race of aliens known for their horrible poetry, in "The Hitchhiker's Guide to
 the Galaxy", by Douglas Adams.
 
