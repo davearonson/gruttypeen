@@ -10,8 +10,8 @@
 </head>
 <body>
 
-<h1 class="site-title">Vogon Poetry Generator</h1>
-<h4>by <%= link_to "Dave Aronson", "http://www.davearonson.com", target: "_new" %></h4>
+<h1 class="site-title"><%= link_to_unless_current "Grutty Peen", root_path %></h1>
+<h4>A Vogon Poetry Generator<br/>by <%= link_to "Dave Aronson", "http://www.davearonson.com", target: "_new" %></h4>
 
 <div class="centered">
   <%= yield %>
