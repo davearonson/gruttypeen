@@ -7,6 +7,7 @@ class Poem < ActiveRecord::Base
       new_word.capitalize! if /[A-Z]/.match(old_word[0])
       result.gsub!(prompt_regex(old_word), new_word)  # prompt
       result.gsub!(/@{#{old_word}}/, new_word)  # back-refs
+      fix_articles(result, new_word)
     end
     # if any left, try with case swapped, else just mark bad
     while (matches = /@{(?<old_word>\w+)(: [^}]+)?}/.match(result))
@@ -43,6 +44,12 @@ class Poem < ActiveRecord::Base
 
   def prompt_regex(key)
     /@{(?<old_word>#{key}): (?<prompt>[^}]+)}/
+  end
+
+  def fix_articles(result, new_word)
+    if %w(a e i o u h).include? new_word.chars.first.downcase
+      result.gsub!(/\b(a) #{new_word}\b/i, "\\1n #{new_word}")
+    end
   end
 
   def fix_backrefs_in_prompt(prompt, words)

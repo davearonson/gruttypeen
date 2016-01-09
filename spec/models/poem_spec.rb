@@ -11,18 +11,20 @@ describe Poem do
     " @{see: verb, one syllable, rhyming with the singular of @Trees@}\n"\
     "A @{poem: noun, two syllables, accent on the first} @{surprise}"\
     " @{lovely: adjective, two syllables, accent on the first} as a"\
-    " @{tree: singular of @Trees@} @{boo: blah blah blah} @{i}") }
+    " @{tree: singular of @Trees@}\n"\
+    "@{boo: blah blah blah} @{i} a @{see}") }
 
-  it "#fill_with substitutes responses, with proper case" do
-    responses = { "Trees" => "boats",
+  it "#fill_with substitutes responses, with proper case and articles" do
+    responses = { "Trees" => "ants",
                   "I" => "they",
-                  "see" => "float",
-                  "poem" => "boar's head",
+                  "see" => "pant",
+                  "poem" => "aardvark",
                   "lovely" => "tired",
-                  "tree" => "boat" }
+                  "tree" => "ant" }
     expect(poem.fill_with responses).
-      to eq("Boats\nThey think that I shall never float\n"\
-            "A boar's head @{ERROR - surprise} tired as a boat @{ERROR - boo: blah blah blah} they")
+      to eq("Ants\nThey think that I shall never pant\n"\
+            "An aardvark @{ERROR - surprise} tired as an ant\n"\
+            "@{ERROR - boo: blah blah blah} they a pant")
   end
 
   it "#prompts finds the prompts and translates number back-refs" do
