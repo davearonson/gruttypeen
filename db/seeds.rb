@@ -100,7 +100,7 @@ EOT
 Poem.create(title: "The Arrow and The Song",
             author: "Henry Wadsworth Longfellow",
             text: <<-EOT.gsub(/^ */, "").gsub(/\n\Z/, ""))
-            I shot an @{arrow: noun, one syllable} into the air,
+            I shot an @{arrow: noun, two syllables, accent on the first} into the air,
             It fell to earth, I knew not where;
             For, so @{swiftly: adverb, two syllables} it @{flew: verb, past tense, one syllable}, the sight
             Could not @{follow: verb, two syllables, accent on the first} it in its flight.
