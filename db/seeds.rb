@@ -97,10 +97,11 @@ Poem.create(title: "The Eagle",
             And like a @{thunderbolt: noun, three syllables, accent on the first} he falls.
 EOT
 
+# note: had to s/\ban\b/a/ -- code changes coming soon to handle that automagically
 Poem.create(title: "The Arrow and The Song",
             author: "Henry Wadsworth Longfellow",
             text: <<-EOT.gsub(/^ */, "").gsub(/\n\Z/, ""))
-            I shot an @{arrow: noun, two syllables, accent on the first} into the air,
+            I shot a @{arrow: noun, two syllables, accent on the first} into the air,
             It fell to earth, I knew not where;
             For, so @{swiftly: adverb, two syllables} it @{flew: verb, past tense, one syllable}, the sight
             Could not @{follow: verb, two syllables, accent on the first} it in its flight.
@@ -110,7 +111,7 @@ Poem.create(title: "The Arrow and The Song",
             For who has sight so @{keen: adjective, one syllable} and @{strong: adjective, one syllable, rhyming with @song@},
             That it can @{follow} the flight of @{song}?
 
-            Long, long afterward, in an @{oak: noun, one syllable}
+            Long, long afterward, in a @{oak: noun, one syllable}
             I found the @{arrow}, still @{unbroke: adjective, two syllables, accent on the second};
             And the @{song}, from beginning to end,
             I found again in the @{heart: noun, one syllable} of a friend.
