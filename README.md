@@ -1,5 +1,8 @@
 # GruttyPeen
 
+[![Code Climate](https://codeclimate.com/github/davearonson/gruttypeen/badges/gpa.svg)](https://codeclimate.com/github/davearonson/gruttypeen)
+[![Build Status](https://travis-ci.org/davearonson/gruttypeen.png)](https://travis-ci.org/davearonson/gruttypeen)
+
 This is a silly little toy I thought up many years ago... then got around to
 actually creating a few years ago... and added some polish and finally put it
 out for public consumption just in time for my friend Tara's 42nd birthday
