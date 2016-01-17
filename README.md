@@ -1,6 +1,7 @@
 # GruttyPeen
 
 [![Code Climate](https://codeclimate.com/github/davearonson/gruttypeen/badges/gpa.svg)](https://codeclimate.com/github/davearonson/gruttypeen)
+[![Test Coverage](https://codeclimate.com/github/davearonson/gruttypeen/badges/coverage.svg)](https://codeclimate.com/github/davearonson/gruttypeen/coverage)
 [![Build Status](https://travis-ci.org/davearonson/gruttypeen.png)](https://travis-ci.org/davearonson/gruttypeen)
 
 This is a silly little toy I thought up many years ago... then got around to
